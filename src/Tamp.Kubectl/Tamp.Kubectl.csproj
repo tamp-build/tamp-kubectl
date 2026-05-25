@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net8.0;net9.0;net10.0</TargetFrameworks>
+    <RootNamespace>Tamp.Kubectl</RootNamespace>
+    <AssemblyName>Tamp.Kubectl</AssemblyName>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Package">
+    <PackageId>Tamp.Kubectl</PackageId>
+    <Description>Tamp CommandPlan wrappers for the kubectl CLI — Apply, Get, Delete, Describe, Rollout (Status/Restart/Undo), PortForward, Logs, Exec, Scale, SetImage. Common settings cover --context / --namespace / --kubeconfig / --as / --dry-run / -o so adopters don't reinvent the cross-cutting knobs per verb. Unpinned name (kubectl's CLI surface is backward-compatible across releases per Kubernetes deprecation policy).</Description>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="$(TampCorePath)" Condition="'$(TampCoreMode)' == 'project'" />
+    <PackageReference Include="Tamp.Core" Condition="'$(TampCoreMode)' == 'package'" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" PrivateAssets="All" />
+  </ItemGroup>
+
+</Project>
