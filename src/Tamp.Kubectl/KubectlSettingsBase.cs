@@ -46,7 +46,7 @@ public abstract class KubectlSettingsBase
     /// <summary>kubeconfig context to target (<c>--context</c>).</summary>
     public string? Context { get; set; }
 
-    /// <summary>Namespace scope (<c>-n</c> / <c>--namespace</c>). Mutually exclusive with <see cref="AllNamespaces"/> on verbs that support both.</summary>
+    /// <summary>Namespace scope (<c>-n</c> / <c>--namespace</c>). Mutually exclusive with <c>AllNamespaces</c> on verbs that support both.</summary>
     public string? Namespace { get; set; }
 
     /// <summary>
