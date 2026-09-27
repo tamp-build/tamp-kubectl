@@ -26,6 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) 
 - Fluent + object-init authoring parity on every verb.
 - Multi-target `net8.0;net9.0;net10.0`.
 - 67 unit tests across all three TFMs covering per-verb arg shape, validation, mutex constraints (file/kustomize, all-namespaces/namespace, resource/file delete modes), Go-duration formatting, kubeconfig env-var-vs-flag posture, object-init parity, realistic deploy chain composition.
+- Package now ships XML documentation files (`.xml`) alongside the assembly, so consumers get IntelliSense and API docs. (Mirrors [tamp-build/tamp#3](https://github.com/tamp-build/tamp/pull/50).)
 
 ### Closes
 
